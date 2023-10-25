@@ -1,0 +1,99 @@
+:root {
+  --font-color: lightgrey;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkslategray;
+  color: var(--font-color);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  text-shadow: 2px 2px 2px #000;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+#skills-list,
+#job-description {
+  padding: 0;
+}
+
+#skills-list li,
+#job-description li {
+  display: block;
+  padding: 0.5rem;
+}
+
+#skills-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  /* Justified content */
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+  #skills-list li {
+    background-color: rgba(0, 0, 0, 0.6);
+    background: radial-gradient(circle, darkslategray 0%, rgba(0, 0, 0, 0.6) 100%);
+    border-radius: 1rem;
+    border: 2px solid rgba(211, 211, 211, 0.6);
+    /* 3 columns */
+    flex-basis: 30%;
+  }
+
+a:link, a:visited, a:hover, a:active {
+  color: var(--font-color);
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+#section-links {
+  list-style: square;
+}
+
+#fullscreen-container {
+  width: 90vw; height: auto;
+  min-width: 280px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.section {
+  width: 50%; min-height: 100px;
+  padding: 1rem;
+  border: 2px solid lightgray;
+  background-color: rgba(0, 0, 0, 0.6);
+  background: radial-gradient(circle, darkslategray 0%, rgba(0, 0, 0, 0.6) 100%);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+/* Media query for smaller widths */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 0.5rem;
+  }
+
+  .section {
+    min-height: 20px;
+  }
+}
